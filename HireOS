@@ -1,0 +1,38 @@
+import React from "react"; import { Button } from "@/components/ui/button"; import { Card, CardContent } from "@/components/ui/card"; import { Input } from "@/components/ui/input"; import { Textarea } from "@/components/ui/textarea";
+
+export default function Home() { return ( <main className="min-h-screen bg-gray-50 p-6 flex flex-col items-center justify-center"> <Card className="w-full max-w-xl shadow-xl"> <CardContent className="p-6"> <h1 className="text-2xl font-bold mb-4 text-center">Order a Service from Vishaan (HireOS)</h1>
+
+<form className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium">Service Name</label>
+          <Input placeholder="e.g., AI Resume Creation" />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium">Details / Requirements</label>
+          <Textarea placeholder="Tell us what you need" />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium">Deadline</label>
+          <Input type="date" />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium">Your Email</label>
+          <Input type="email" placeholder="you@example.com" />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium">Additional Info</label>
+          <Textarea placeholder="Links, tone preference, references etc." />
+        </div>
+
+        <Button className="w-full mt-4">Submit Request</Button>
+      </form>
+    </CardContent>
+  </Card>
+</main>
+
+); }
+
